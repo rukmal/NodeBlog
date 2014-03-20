@@ -1,8 +1,8 @@
-
-/**
- * Module dependencies.
+/*
+ * @author Rukmal Weerawarana
+ *
+ * @description Node configuration
  */
-
 var express = require('express');
 var routes = require('./routes/main');
 var http = require('http');
