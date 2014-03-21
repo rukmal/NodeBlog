@@ -6,6 +6,9 @@
 
 'use strict'
 
- $(document).ready(function() {
-     var s = skrollr.init();
+$(document).ready(function() {
+    $.fn.fullpage({
+        scrollingSpeed: 500,
+        verticalCentered: true
+    });
 });
