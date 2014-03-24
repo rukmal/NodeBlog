@@ -1,7 +1,7 @@
 /*
  * @author Rukmal Weerawarana
  *
- * @description Mongoose database schema for an individual post.
+ * @description Mongoose database schema for posts.
  */
 
 var mongoose = require('mongoose');
