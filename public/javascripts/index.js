@@ -9,6 +9,7 @@
 $(document).ready(function() {
     $.fn.fullpage({
         scrollingSpeed: 500,
-        verticalCentered: true
+        verticalCentered: true,
+        slidesColor: ['#0e7708', '#087b86']
     });
 });
