@@ -1,3 +1,7 @@
-#blogtitle {
+h1 {
     font-family: 'Myriad Pro', Helvetica, Verdana;
+}
+
+span.glyphicon {
+    font-size: 2em;
 }

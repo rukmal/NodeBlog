@@ -9,7 +9,6 @@
 $(document).ready(function() {
     $.fn.fullpage({
         scrollingSpeed: 500,
-        verticalCentered: true,
-        slidesColor: ['#0e7708', '#087b86']
+        slidesColor: ['rgba(0, 0, 0, 0.38)', '#087b86']
     });
 });

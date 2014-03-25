@@ -15,3 +15,9 @@ exports.index = function(req, res){
         name: firstName
     });
 };
+
+exports.all_posts = function(req, res) {
+    res.render('all_posts', {
+        title: pageTitle + 'All posts'
+    })
+}

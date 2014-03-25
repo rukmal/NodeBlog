@@ -13,6 +13,11 @@ var postSchema = new mongoose.Schema({
         unique: true
     },
 
+    coverImage: {
+        type: String,
+        required: true
+    }
+
     date: {
         type: Date,
         default: Date.now
