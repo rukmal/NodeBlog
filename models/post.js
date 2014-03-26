@@ -13,10 +13,15 @@ var postSchema = new mongoose.Schema({
         unique: true
     },
 
-    coverImage: {
+    content: {
         type: String,
         required: true
-    }
+    },
+
+    photo: {
+        type: String,
+        required: true
+    },
 
     date: {
         type: Date,

@@ -1,7 +1,7 @@
 /*
  * @author Rukmal Weerawarana
  *
- * @description Javascript functions and Skrollr api implementation for the index page.
+ * @description Javascript functions and FullPageJS api implementation for the index page.
  */
 
 'use strict'
