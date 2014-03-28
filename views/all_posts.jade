@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    link(rel='stylesheet' href='./stylesheets/all_posts.css')
+    script(src='./javascripts/all_posts.js')
+    div#background
+    div.jumbotron.text-center#title
+        h1 All Posts
+    div.jumbotron#posts
+        div.container
+            - each post in posts
+                a.link(href='/#{post.date.getFullYear()}/#{post.slug}'): h2.postlink=post.title
+                p= post.description
+                br

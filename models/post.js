@@ -28,6 +28,11 @@ var postSchema = new mongoose.Schema({
         default: Date.now
     },
 
+    description: {
+        type: String,
+        required: true
+    },
+
     slug: {
         type: String,
         required: true,

@@ -14,7 +14,7 @@ var lastName = 'Appleseed';
 var fullName = firstName + lastName;
 var pageTitle = firstName + '\'s Blog : ';
 
-exports.index = function(req, res){
+exports.index = function(req, res) {
     res.render('index',{
         title: pageTitle + 'Home',
         name: firstName
@@ -22,8 +22,17 @@ exports.index = function(req, res){
 };
 
 exports.all_posts = function(req, res) {
-    res.render('all_posts', {
-        title: pageTitle + 'All posts'
+    var myCursor = Post.find();
+    myCursor.sort({'date': -1});
+    myCursor.find(function(err, posts) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('all_posts', {
+                title: pageTitle + 'All posts',
+                posts: posts
+            });
+        }
     });
 };
 
@@ -49,12 +58,12 @@ exports.new_post_add = function(req, res) {
     var post = new Post({
         title: req.body.post_title,
         content: req.body.post_content,
+        description: req.body.post_description,
         photo: req.body.post_photo,
         slug: req.body.post_slug
     });
 
     post.save(function(err) {
-        console.log(err);
         if (err) {
             res.redirect('/new_post_error');
         } else {

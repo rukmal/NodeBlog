@@ -9,6 +9,7 @@
 $(document).ready(function() {
     $.fn.fullpage({
         scrollingSpeed: 500,
-        slidesColor: ['rgba(0, 0, 0, 0.38)', '#087b86']
+        slidesColor: ['rgba(172, 171, 171, 0.38)', '#c9c0bc'],
+        anchors: ['home', 'recents'],
     });
 });

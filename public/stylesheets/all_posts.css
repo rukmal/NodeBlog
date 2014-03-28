@@ -1,0 +1,35 @@
+html, body, div {
+    width: 100%;
+}
+
+div.jumbotron {
+    margin: 0;
+}
+
+#background {
+    background: url('./../images/all_posts_background.jpg');
+    position: fixed;
+    z-index: -1;
+    height: 22em;
+    background-size: 100% auto;
+}
+
+#title {
+    background-color: rgba(245, 245, 245, 0);
+    color: #ffffff;
+    box-shadow: 1px 10px 10px black;
+    height: 22em;
+    padding-top: 8em;
+}
+
+#posts {
+    background-color: #e1e1e1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.postlink {
+    color: rgb(51,51,51);
+}
