@@ -47,6 +47,10 @@ app.get('/new_post_success', routes.new_post_success);
 // HTTP post request routing
 app.post('/new_post_add', routes.new_post_add);
 
+// Generic HTTP get request routing
+app.get('/post/:slug', routes.show_post);
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

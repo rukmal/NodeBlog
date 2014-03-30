@@ -27,12 +27,11 @@ exports.all_posts = function(req, res) {
     myCursor.find(function(err, posts) {
         if (err) {
             console.log(err);
-        } else {
-            res.render('all_posts', {
-                title: pageTitle + 'All posts',
-                posts: posts
-            });
         }
+        res.render('all_posts', {
+            title: pageTitle + 'All posts',
+            posts: posts
+        });
     });
 };
 
@@ -66,8 +65,17 @@ exports.new_post_add = function(req, res) {
     post.save(function(err) {
         if (err) {
             res.redirect('/new_post_error');
-        } else {
-            res.redirect('/new_post_success');
         }
+        res.redirect('/new_post_success');
+    });
+}
+
+
+exports.show_post = function(req, res) {
+    Post.find({ 'slug': req.params.slug }, function(err, post) {
+        if (err) {
+            console.log(err);
+        }
+        res.render('post', { title: post[0].title, post: post[0]})
     });
 }

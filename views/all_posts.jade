@@ -9,6 +9,6 @@ block content
     div.jumbotron#posts
         div.container
             - each post in posts
-                a.link(href='/#{post.date.getFullYear()}/#{post.slug}'): h2.postlink=post.title
+                a.link(href='/post/#{post.slug}'): h2.postlink=post.title
                 p= post.description
                 br
