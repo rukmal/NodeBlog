@@ -80,8 +80,6 @@ exports.show_post = function(req, res) {
         if (err) {
             console.log(err);
         }
-        console.log(marked(post[0].content));
-        console.log(post[0].content)
         res.render('post', {
             post: post[0],
             content: marked(post[0].content),
