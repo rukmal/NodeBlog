@@ -10,6 +10,7 @@
     "jade": "*",
     "mongoose": "*",
     "forever": "*",
-    "markdown": "*"
+    "markdown": "*",
+    "marked": "*"
   }
 }

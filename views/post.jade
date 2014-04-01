@@ -1,6 +1,29 @@
 extends ../views/layout
 
 block content
-    div.jumbotron
+    link(rel='stylesheet' href='./../stylesheets/post.css')
+    div.jumbotron.text-center#title(style='background: url("#{post.photo}");background-size: 100% auto;background-attachment: fixed;background-color: rgba(245, 245, 245, 0);color: #ffffff;box-shadow: 1px 10px 10px black;height: 22em;padding-top: 8em;')
         h1= post.title
-        :markdown
+    div.jumbotron
+        div.container
+            != content
+            br
+            br
+            br
+            h2.text-center About the author:
+            br
+            div.text-center.col-md-6
+                img#intropic(src='../#{imageLocation}')
+            div.text-center.col-md-6
+                p= description
+            div#fb-root
+            script.
+                (function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=621121534641370";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+                $.getScript('http://connect.facebook.net/en_UK/all.js', function() {
+                FB.init({appId: '621121534641370'});}

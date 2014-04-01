@@ -6,18 +6,11 @@ div.jumbotron {
     margin: 0;
 }
 
-#background {
-    background: url('./../images/all_posts_background.jpg');
-    position: fixed;
-    z-index: -1;
-    height: 22em;
-    background-size: 100% auto;
-}
-
 #title {
-    background-color: rgba(245, 245, 245, 0);
+    background: url('./../images/all_posts_background.jpg');
+    background-attachment: fixed;
+    background-size: 100% auto;
     color: #ffffff;
-    box-shadow: 1px 10px 10px black;
     height: 22em;
     padding-top: 8em;
 }

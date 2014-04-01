@@ -1,0 +1,18 @@
+div.jumbotron {
+    margin: 0;
+}
+
+#title {
+    background: url('#{post.photo}');
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-color: rgba(245, 245, 245, 0);
+    color: #ffffff;
+    box-shadow: 1px 10px 10px black;
+    height: 22em;
+    padding-top: 8em;
+}
+
+#intropic {
+    height: 11em;
+}

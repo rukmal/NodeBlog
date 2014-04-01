@@ -8,12 +8,15 @@
 
 // Requiring mongoose models
 var Post = require('./../models/post');
+// Requiring Github-flavored markdown (to parse posts)
+var marked = require('marked');
 
 var firstName = 'John'; // <-- Change all of these
 var lastName = 'Appleseed';
 var fullName = firstName + lastName;
 var pageTitle = firstName + '\'s Blog : ';
 var description = 'This is a test description. My name isn\'t really John Appleseed. It\'s Rukmal Weerawarana, and if you want to get in touch with me, please do not hesitate to contact me at http://rukmal.me or rukmal.weerawarana@gmail.com.'
+var imageLocation = 'images/user_picture.jpg'
 
 exports.index = function(req, res) {
     res.render('index',{
@@ -24,7 +27,7 @@ exports.index = function(req, res) {
 
 exports.all_posts = function(req, res) {
     var myCursor = Post.find();
-    myCursor.sort({'date': -1});
+    myCursor.sort({ 'date': -1 });
     myCursor.find(function(err, posts) {
         if (err) {
             console.log(err);
@@ -77,10 +80,13 @@ exports.show_post = function(req, res) {
         if (err) {
             console.log(err);
         }
+        console.log(marked(post[0].content));
+        console.log(post[0].content)
         res.render('post', {
-            title: post[0].title,
             post: post[0],
-            description: description
+            content: marked(post[0].content),
+            description: description,
+            imageLocation: imageLocation
         })
     });
 }
