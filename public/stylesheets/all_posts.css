@@ -1,5 +1,6 @@
 html, body, div {
     width: 100%;
+    background-color: rgb(225,225,225);
 }
 
 div.jumbotron {
