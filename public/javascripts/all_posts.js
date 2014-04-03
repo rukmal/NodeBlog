@@ -6,10 +6,10 @@
 
 $(document).ready(function() {
     $('.postlink').mouseenter(function() {
-        $(this).animate({color: '#6ab8ec'}, 300);
+        $(this).animate({color: '#6ab8ec'}, 150);
     });
 
     $('.postlink').mouseleave(function() {
-        $(this).animate({color: 'rgb(51,51,51)'}, 400);
+        $(this).animate({color: 'rgb(51,51,51)'}, 200);
     });
 });

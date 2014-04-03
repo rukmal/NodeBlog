@@ -7,7 +7,13 @@ block content
         h1 All Posts
     div.jumbotron#posts
         div.container
+            - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             - each post in posts
-                a.link(href='/post/#{post.slug}'): h2.postlink=post.title
-                p= post.description
-                br
+                div#border
+                    p#date= post.date.getDay() + ' ' + months[post.date.getMonth()] + ' ' + post.date.getFullYear()
+                    a.link(href='/post/#{post.slug}'): h2.postlink=post.title
+                    p= post.description
+                    br
+    div.navbar-fixed-bottom.footer
+        div.container.text-center.footer
+            p All content is the property of <a id='footerlink' href='#{personalSite}' target='_blank'>#{fullName}</a>.

@@ -13,10 +13,11 @@ var marked = require('marked');
 
 var firstName = 'John'; // <-- Change all of these
 var lastName = 'Appleseed';
-var fullName = firstName + lastName;
+var fullName = firstName + ' ' + lastName;
 var pageTitle = firstName + '\'s Blog : ';
 var description = 'This is a test description. My name isn\'t really John Appleseed. It\'s Rukmal Weerawarana, and if you want to get in touch with me, please do not hesitate to contact me at http://rukmal.me or rukmal.weerawarana@gmail.com.'
-var imageLocation = 'images/user_picture.jpg'
+var imageLocation = 'images/user_picture.jpg';
+var personalSite = 'http://cnn.com/'; // <-- If none, set this to '#'
 
 exports.index = function(req, res) {
     res.render('index',{
@@ -33,6 +34,8 @@ exports.all_posts = function(req, res) {
             console.log(err);
         }
         res.render('all_posts', {
+            personalSite: personalSite,
+            fullName: fullName,
             title: pageTitle + 'All posts',
             posts: posts
         });
