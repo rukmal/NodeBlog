@@ -10,7 +10,7 @@ var path = require('path');
 var mongoose = require('mongoose');
 var postSchema = require('./models/post');
 
-var dbURL = 'mongodb://localhost/blogposts';
+var dbURL = 'mongodb://rukmal:test@ds029328.mongolab.com:29328/nodeblogdemo';
 
 mongoose.connect(dbURL);
 
