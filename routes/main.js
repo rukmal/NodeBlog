@@ -69,8 +69,9 @@ exports.new_post_add = function(req, res) {
     post.save(function(err) {
         if (err) {
             res.redirect('/new_post_error');
+        } else {
+            res.redirect('/new_post_success');
         }
-        res.redirect('/new_post_success');
     });
 }
 
