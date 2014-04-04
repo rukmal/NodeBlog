@@ -16,4 +16,5 @@ block content
                     br
     div.navbar-fixed-bottom.footer
         div.container.text-center.footer
-            p All content is the property of <a id='footerlink' href='#{personalSite}' target='_blank'>#{fullName}</a>.
+            p All content is the property of
+                a#footerlink(href='#{personalSite}' target='_blank')= ' ' + fullName + '.'
