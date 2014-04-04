@@ -11,6 +11,7 @@
     "mongoose": "*",
     "forever": "*",
     "markdown": "*",
-    "marked": "*"
+    "marked": "*",
+    "socket.io": "~0.9.16"
   }
 }

@@ -1,7 +1,8 @@
 /*
  * @author Rukmal Weerawarana
  *
- * @description Node configuration
+ * @description Node configuration, routing, add new post page authentication
+ * and socket.io configuration.
  */
 
 var express = require('express');
@@ -52,6 +53,14 @@ app.post('/new_post_add', routes.new_post_add);
 app.get('/post/:slug', routes.show_post);
 
 
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+});
+
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function(socket) {
+    socket.on('facebook-id', function(data) {
+        console.log(data);
+    });
 });
