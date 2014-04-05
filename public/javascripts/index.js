@@ -27,11 +27,18 @@ $(document).ready(function() {
     $.getScript('http://connect.facebook.net/en_UK/all.js', function() {
         FB.getLoginStatus(function(response) {
             if (response != NaN) {
-                console.log(response);
                 socket.emit('facebook-data', {
                     id: response.authResponse.userID
                 })
             };
         });
+    });
+
+    socket.on('button-data', function(data) {
+        if (data.display) {
+            $('#newpost').css({ 'visiblity': 'normal' });
+        } else {
+            $('#newpost').css({ 'visibility': 'hidden' });
+        }
     });
 });

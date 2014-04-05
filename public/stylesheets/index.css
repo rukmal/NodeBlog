@@ -8,7 +8,10 @@ span.glyphicon {
     color: rgb(51,51,51);
 }
 
-
 #main, #posts {
     margin: 0;
+}
+
+#newpost {
+    visibility: hidden;
 }
