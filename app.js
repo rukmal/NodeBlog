@@ -60,15 +60,4 @@ var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-var io = require('socket.io').listen(server);
-
-io.sockets.on('connection', function(socket) {
-    socket.on('facebook-data', function(data) {
-        console.log(data);
-        if (authors.indexOf(data.id) != -1) {
-            socket.emit('button-data', { display: true });
-        } else {
-            socket.emit('button-data', { display: false });
-        }
-    });
-});
+var io = require('./private/js/socketconfig.js').listen(server);
