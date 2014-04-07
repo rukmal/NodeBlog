@@ -12,8 +12,6 @@ var path = require('path');
 var mongoose = require('mongoose');
 var postSchema = require('./models/post');
 
-var authors = ['1062761833', '1234567890']; // <-- Change this to the Facebook ID's of the authors
-
 var dbURL = 'mongodb://rukmal:test@ds029328.mongolab.com:29328/nodeblogdemo'; // <-- Change this to
 // the URL of your Mongo database
 

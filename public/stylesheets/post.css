@@ -1,61 +1,53 @@
 div.jumbotron {
-    margin: 0;
+	margin: 0;
 }
 
 img#intropic {
-    height: 6em;
+	height: 6em;
 }
 
 img {
-    height: 30em;
-    float: left;
+	height: 30em;
+	float: left;
 }
 
 #abouttext p{
-    float: left;
-    width: 35%;
-    font-size: 1em;
+	float: left;
+	width: 35%;
+	font-size: 1em;
 
 }
 
 .containabout {
-    height: 3%;
-    width: 35%;
+	height: 3%;
+	width: 35%;
 }
 
 .buttonalign {
-    float: left;
+	float: left;
 }
 
 .fb-share-button {
-    margin-right: 1em;
+	margin-right: 1em;
 }
 
 .twitter-share-button {
-    margin-top: 10px;
-    margin-right:1em;
+	margin-top: 10px;
+	margin-right:1em;
 }
 
 
 @media screen and (max-device-width: 600px) {
-    #abouttext p {
-    width: 80%;
+	#abouttext p {
+		width: 80%;
+	}
 
+	img#intropic {
+		height: 3em;
+	}
 
-
-}
-}
-
-
-@media screen and (max-device-width: 600px) {
-    img#intropic {
-    height: 3em;
-}
-}
-
-@media screen and (max-device-width: 600px) {
-    h2 {
-    font-size: 1em;
-    text-align: left;
-}
+	h2 {
+		font-size: 1em;
+		text-align: left;
+	}
 }

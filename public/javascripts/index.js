@@ -24,6 +24,7 @@ $(document).ready(function () {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
+<<<<<<< HEAD
     $('#authorize').click(function () {
         FB.getLoginStatus(function (response) {
             socket.emit('facebook-login-info', response);
@@ -31,6 +32,20 @@ $(document).ready(function () {
     });
 
     socket.on('nodeblog-auth-response', function (data) {
+=======
+    $.getScript('http://connect.facebook.net/en_UK/all.js', function () {
+        FB.getLoginStatus(function(response) {
+            console.log(response);
+            if (response != NaN) {
+                socket.emit('facebook-data', {
+                    id: response.authResponse.userID
+                });
+            };
+        });
+    });
+
+    socket.on('test', function(data) {
+>>>>>>> a0098ad08a786c2f28dfd131404337ca52711bb6
         console.log(data);
     });
 });

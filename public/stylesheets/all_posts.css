@@ -1,18 +1,18 @@
 html, body, div {
-    width: 100%;
-    background-color: rgb(225,225,225);
+	width: 100%;
+	background-color: rgb(225,225,225);
 }
 
 div.jumbotron {
-    margin: 0;
+	margin: 0;
 }
 
 #title {
-    background: url('./../images/all_posts_background.jpg');
-    background-attachment: fixed;
-    background-size: 100% auto;
-    height: 22em;
-    padding-top: 3%;
+	background: url('./../images/all_posts_background.jpg');
+	background-attachment: fixed;
+	background-size: 100% auto;
+	height: 22em;
+	padding-top: 3%;
 
 }
 
@@ -22,56 +22,51 @@ div.jumbotron {
 }
 
 #posts {
-    background-color: #e1e1e1;
+	background-color: #e1e1e1;
 }
 
 #date {
-    padding-top: 2em;
-    font-size: 1em;
+	padding-top: 2em;
+	font-size: 1em;
 }
 
 #footerlink {
-    color: rgb(112,112,112);
+	color: rgb(112,112,112);
 }
 
 div#border {
-    border-bottom: solid #B0B0B0 1px;
+	border-bottom: solid #B0B0B0 1px;
 }
 
 a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .postlink {
-    color: rgb(51,51,51);
-    margin-top: -0.4em;
+	color: rgb(51,51,51);
+	margin-top: -0.4em;
 }
 
 div.footer {
-    padding-top: 0.4em;
+	padding-top: 0.4em;
 }
 
 @media screen and (max-device-width: 600px) {
-#title {
-    background-color: #309df4;
-    padding-top: 10%;
-    background-attachment: fixed;
-    background-size: 100% auto;
-}
-}
+	#title {
+		background-color: #309df4;
+		padding-top: 10%;
+		background-attachment: fixed;
+		background-size: 100% auto;
+	}
 
-@media screen and (max-device-width: 600px) {
-#title {
-    background: #309df4;
-    padding-top: 30%;
-    background-attachment: fixed;
-    background-size: 100% auto;
-}
-}
+	#title {
+		background: #309df4;
+		padding-top: 30%;
+		background-attachment: fixed;
+		background-size: 100% auto;
+	}
 
-@media screen and (max-device-width: 600px) {
-    #title h1 {
-    color: #dbdcdd;
-
-}
+	#title h1 {
+		color: #dbdcdd;
+	}
 }
