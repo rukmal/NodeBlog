@@ -82,11 +82,10 @@ exports.new_post_add = function (req, res) {
 			res.redirect('/new_post_success');
 		}
 	});
-}
+};
 
 
 exports.show_post = function (req, res) {
-<<<<<<< HEAD
     Post.find({ 'slug': req.params.slug }, function(err, post) {
         if (err) {
             console.log(err);
@@ -98,18 +97,4 @@ exports.show_post = function (req, res) {
             imageLocation: imageLocation
         })
     });
-}
-=======
-	Post.find({ 'slug': req.params.slug }, function(err, post) {
-		if (err) {
-			console.log(err);
-		}
-		res.render('post', {
-			post: post[0],
-			content: marked(post[0].content),
-			description: description,
-			imageLocation: imageLocation
-		})
-	});
-}
->>>>>>> a0098ad08a786c2f28dfd131404337ca52711bb6
+};
