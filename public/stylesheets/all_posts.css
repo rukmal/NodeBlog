@@ -11,9 +11,14 @@ div.jumbotron {
     background: url('./../images/all_posts_background.jpg');
     background-attachment: fixed;
     background-size: 100% auto;
-    color: #ffffff;
     height: 22em;
-    padding-top: 8em;
+    padding-top: 3%;
+
+}
+
+#title h1 {
+  color: #ffffff;
+  padding-top: 3%;
 }
 
 #posts {
@@ -44,4 +49,29 @@ a:hover {
 
 div.footer {
     padding-top: 0.4em;
+}
+
+@media screen and (max-device-width: 600px) {
+#title {
+    background-color: #309df4;
+    padding-top: 10%;
+    background-attachment: fixed;
+    background-size: 100% auto;
+}
+}
+
+@media screen and (max-device-width: 600px) {
+#title {
+    background: #309df4;
+    padding-top: 30%;
+    background-attachment: fixed;
+    background-size: 100% auto;
+}
+}
+
+@media screen and (max-device-width: 600px) {
+    #title h1 {
+    color: #dbdcdd;
+
+}
 }

@@ -4,7 +4,7 @@ block content
     link(rel='stylesheet' href='./../stylesheets/post.css')
     script(src='./../javascripts/post.js')
     div#fb-root
-    div.jumbotron.text-center#title(style='background: url("#{post.photo}");background-size: 100% auto;background-attachment: fixed;background-color: rgba(245, 245, 245, 0);color: #ffffff;box-shadow: 1px 10px 10px black;height: 22em;padding-top: 6.5em;')
+    div.jumbotron.text-center#title(style='background: url("#{post.photo}");background-size: 100% auto;background-attachment: fixed;background-color: rgb(237, 237, 237);color: #ffffff;box-shadow: 1px 10px 10px black;height: 22em;padding-top: 6.5em; background-repeat: no-repeat;')
         h1= post.title
     div.jumbotron
         div.container
@@ -12,15 +12,14 @@ block content
             br
             br
             br
-            h2.text-center About the author:
+            h2 About the author:
             br
-            div.text-center.col-md-6
+            div#abouttext
                 img.img-circle#intropic(src='../#{imageLocation}')
-            div.jumbotron.text-center.col-md-6
-                p= description
-    div.jumbotron.text-center
-        div.fb-share-button.col-md-1(data-type='button')
-        a.twitter-share-button.col-md-1#twitterlink Tweet
-        div.g-plus.socialbutton.col-md-1(data-action='share' data-annotation='none' data-count='none')
+                p.text-center.containabout= description
+    div.jumbotron.text-center.buttonalign
+        div.fb-share-button(data-type='button')
+        a.twitter-share-button#twitterlink Tweet
+        div.g-plus.socialbutton(data-action='share' data-annotation='none' data-count='none')
     div.jumbotron.text-center
         div.fb-comments(data-numposts="5" data-colorscheme="dark")
