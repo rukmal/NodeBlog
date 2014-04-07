@@ -24,21 +24,18 @@ $(document).ready(function() {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    $.getScript('http://connect.facebook.net/en_UK/all.js', function() {
+    $.getScript('http://connect.facebook.net/en_UK/all.js', function () {
         FB.getLoginStatus(function(response) {
+            console.log(response);
             if (response != NaN) {
                 socket.emit('facebook-data', {
                     id: response.authResponse.userID
-                })
+                });
             };
         });
     });
 
-    socket.on('button-data', function(data) {
-        if (data.display) {
-            $('#newpost').css({ 'visiblity': 'normal' });
-        } else {
-            $('#newpost').css({ 'visibility': 'hidden' });
-        }
+    socket.on('test', function(data) {
+        console.log(data);
     });
 });

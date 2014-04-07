@@ -11,7 +11,3 @@ span.glyphicon {
 #main, #posts {
     margin: 0;
 }
-
-#newpost {
-    visibility: hidden;
-}
