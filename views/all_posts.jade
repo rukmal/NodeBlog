@@ -10,7 +10,7 @@ block content
             - var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             - each post in posts
                 div#border
-                    p#date= post.date.getDay() + ' ' + months[post.date.getMonth()] + ' ' + post.date.getFullYear()
+                    p#date= post.date.getDate() + ' ' + months[post.date.getMonth()] + ' ' + post.date.getFullYear()
                     a.link(href='/post/#{post.slug}'): h2.postlink=post.title
                     p= post.description
                     br
