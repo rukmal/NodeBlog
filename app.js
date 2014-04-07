@@ -46,6 +46,7 @@ app.get('/new_post', routes.new_post);
 app.get('/all_posts', routes.all_posts);
 app.get('/new_post_error', routes.new_post_error);
 app.get('/new_post_success', routes.new_post_success);
+app.get('/edit_post', routes.edit_post);
 
 // HTTP post request routing
 app.post('/new_post_add', routes.new_post_add);

@@ -6,7 +6,7 @@
 
 'use strict'
 
-$(document).ready(function() {
+$(document).ready(function () {
     var socket = io.connect('http://localhost');
 
     $.fn.fullpage({
@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
 
     // Code for Facebook login button (from SDK)
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
@@ -24,6 +24,15 @@ $(document).ready(function() {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
+<<<<<<< HEAD
+    $('#authorize').click(function () {
+        FB.getLoginStatus(function (response) {
+            socket.emit('facebook-login-info', response);
+        });
+    });
+
+    socket.on('nodeblog-auth-response', function (data) {
+=======
     $.getScript('http://connect.facebook.net/en_UK/all.js', function () {
         FB.getLoginStatus(function(response) {
             console.log(response);
@@ -36,6 +45,7 @@ $(document).ready(function() {
     });
 
     socket.on('test', function(data) {
+>>>>>>> a0098ad08a786c2f28dfd131404337ca52711bb6
         console.log(data);
     });
 });

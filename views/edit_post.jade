@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	link(rel='stylesheet' href='./stylesheets/post_pages.css')
+    div.jumbotron.text-center#main
+        h1 Edit your post
+        form#newpostform(method='post' action='new_post_add')
+            div.form-group
+                input.form-control(type='text' placeholder='title' name='post_title')
+            div.form-group
+                textarea.form-control(type='text' placeholder='content (use markdown)' name='post_content' rows='15' cols='40')
+            div.form-group
+                input.form-control(type='text' placeholder='cover photo url' name='post_photo')
+            div.form-group
+                textarea.form-control(type='text' placeholder='description (keep it short, ~5 sentences)' name='post_description')
+            div.form-group
+                input.form-control(type='text' placeholder='slug' name='post_slug')
+            div.form-group
+                button.btn.btn-success#submit(type='submit') Submit

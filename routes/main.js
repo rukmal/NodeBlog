@@ -48,6 +48,12 @@ exports.new_post = function (req, res) {
 	});
 };
 
+exports.edit_post = function (req, res) {
+	res.render('edit_post', {
+		title: pageTitle + 'Edit post',
+	})
+}
+
 exports.new_post_error = function (req, res) {
 	res.render('new_post_pages/new_post_error', {
 		title: pageTitle + 'Post error'
@@ -80,6 +86,20 @@ exports.new_post_add = function (req, res) {
 
 
 exports.show_post = function (req, res) {
+<<<<<<< HEAD
+    Post.find({ 'slug': req.params.slug }, function(err, post) {
+        if (err) {
+            console.log(err);
+        }
+        res.render('post', {
+            post: post[0],
+            content: marked(post[0].content),
+            description: description,
+            imageLocation: imageLocation
+        })
+    });
+}
+=======
 	Post.find({ 'slug': req.params.slug }, function(err, post) {
 		if (err) {
 			console.log(err);
@@ -92,3 +112,4 @@ exports.show_post = function (req, res) {
 		})
 	});
 }
+>>>>>>> a0098ad08a786c2f28dfd131404337ca52711bb6
