@@ -52,9 +52,3 @@ img#intropic {
         font-size: 1em;
 }
 }
-
-@media screen and (max-device-width: 600px) {
-    .twitter-share-button{
-        margin-bottom: 17px;
-}
-}
