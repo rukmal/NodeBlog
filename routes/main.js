@@ -48,6 +48,12 @@ exports.new_post = function (req, res) {
     });
 };
 
+exports.edit_post = function (req, res) {
+	res.render('edit_post', {
+		title: pageTitle + 'Edit post',
+	})
+}
+
 exports.new_post_error = function (req, res) {
     res.render('new_post_pages/new_post_error', {
         title: pageTitle + 'Post error'
