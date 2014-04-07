@@ -4,47 +4,18 @@ div.jumbotron {
 
 img#intropic {
     height: 6em;
-}
-
-img {
-    height: 30em;
-    float: left;
-}
-
-#abouttext p{
-    float: left;
-    width: 35%;
-    font-size: 1em;
 
 }
 
 .containabout {
-    height: 3%;
-    width: 35%;
+    width: 650px;
 }
 
-.buttonalign {
-    float: left;
+#move {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.fb-share-button {
-    margin-right: 1em;
-}
-
-.twitter-share-button {
-    margin-top: 10px;
-    margin-right:1em;
-}
-
-
-@media screen and (max-device-width: 600px) {
-    #abouttext p {
-    width: 80%;
-
-
-
-}
-}
 
 
 @media screen and (max-device-width: 600px) {
@@ -56,6 +27,19 @@ img {
 @media screen and (max-device-width: 600px) {
     h2 {
     font-size: 1em;
-    text-align: left;
+}
+}
+
+@media screen and (max-device-width: 600px) {
+    .containabout {
+    width: 300px;
+
+
+}
+}
+
+@media screen and (max-device-width: 600px) {
+    p.text {
+        font-size: 1em;
 }
 }

@@ -10,16 +10,14 @@ block content
         div.container
             != content
             br
-            br
-            br
+            div.jumbotron.buttonalign
+                div.fb-share-button(data-type='button')
+                a.twitter-share-button#twitterlink Tweet
+                div.g-plus.socialbutton(data-action='share' data-annotation='none' data-count='none')
+
+
+        div.jumbotron.text-center.containabout#move
+            img.img-circle#intropic(src='../#{imageLocation}')
             h2 About the author:
-            br
-            div#abouttext
-                img.img-circle#intropic(src='../#{imageLocation}')
-                p.text-center.containabout= description
-    div.jumbotron.text-center.buttonalign
-        div.fb-share-button(data-type='button')
-        a.twitter-share-button#twitterlink Tweet
-        div.g-plus.socialbutton(data-action='share' data-annotation='none' data-count='none')
-    div.jumbotron.text-center
-        div.fb-comments(data-numposts="5" data-colorscheme="dark")
+            p.text= description
+            div.fb-comments(data-numposts="5" data-colorscheme="dark")
