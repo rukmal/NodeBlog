@@ -16,7 +16,16 @@ img#intropic {
     margin-right: auto;
 }
 
+.buttonalign {
+    margin-top: 5em;
+    width: 100px;
+}
 
+.fb-share-button {
+    margin-bottom: 5px;
+}
+
+/* iPhone fitment */
 
 @media screen and (max-device-width: 600px) {
     img#intropic {
@@ -41,5 +50,11 @@ img#intropic {
 @media screen and (max-device-width: 600px) {
     p.text {
         font-size: 1em;
+}
+}
+
+@media screen and (max-device-width: 600px) {
+    .twitter-share-button{
+        margin-bottom: 17px;
 }
 }
