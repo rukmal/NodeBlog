@@ -3,9 +3,59 @@ div.jumbotron {
 }
 
 img#intropic {
-    height: 11em;
+    height: 6em;
 }
 
 img {
     height: 30em;
+    float: left;
+}
+
+#abouttext p{
+    float: left;
+    width: 35%;
+    font-size: 1em;
+
+}
+
+.containabout {
+    height: 3%;
+    width: 35%;
+}
+
+.buttonalign {
+    float: left;
+}
+
+.fb-share-button {
+    margin-right: 1em;
+}
+
+.twitter-share-button {
+    margin-top: 10px;
+    margin-right:1em;
+}
+
+
+@media screen and (max-device-width: 600px) {
+    #abouttext p {
+    width: 80%;
+
+
+
+}
+}
+
+
+@media screen and (max-device-width: 600px) {
+    img#intropic {
+    height: 3em;
+}
+}
+
+@media screen and (max-device-width: 600px) {
+    h2 {
+    font-size: 1em;
+    text-align: left;
+}
 }
