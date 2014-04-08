@@ -1,20 +1,19 @@
 extends layout
 
 block content
-    link(rel='stylesheet' href='./stylesheets/jquery.fullPage.css')
-    link(rel='stylesheet' href='./stylesheets/index.css')
-    script(src='./socket.io/socket.io.js')
-    script(src='./javascripts/jquery.fullPage.min.js')
-    script(src='./javascripts/index.js')
-    div.section.text-center#main
-        h1#blogtitle Welcome to #{name}'s Blog.
-        a(href='#recents'): span.glyphicon.glyphicon-circle-arrow-down#downbutton
-        br
-    div.section.text-center
-        div#newpost
-            div.btn.btn-success Add new post
-            br
-            br
-        div.fb-login-button(data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true")
-        h1 Recent posts
-        a(href='/all_posts') View all posts
+	link(rel='stylesheet' href='./stylesheets/jquery.fullPage.css')
+	link(rel='stylesheet' href='./stylesheets/index.css')
+	script(src='./socket.io/socket.io.js')
+	script(src='./javascripts/jquery.fullPage.min.js')
+	script(src='./javascripts/index.js')
+	.section.text-center#main
+		h1#blogtitle Welcome to #{name}'s Blog.
+		a(href='#recents'): span.glyphicon.glyphicon-circle-arrow-down#downbutton
+		br
+	.section.text-center
+		.btn.btn-success#authorize Authorize
+		br
+		br
+		.btn.fb-login-button(data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true")
+		h1 Recent posts
+		a(href='/all_posts') View all posts
