@@ -7,8 +7,6 @@
 'use strict'
 
 $(document).ready(function () {
-	var socket = io.connect('http://localhost');
-
 	$.fn.fullpage({
 		scrollingSpeed: 500,
 		slidesColor: ['rgba(172, 171, 171, 0.38)', '#c9c0bc'],
@@ -23,14 +21,4 @@ $(document).ready(function () {
 		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=621121534641370";
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
-
-	$('#authorize').click(function () {
-		FB.getLoginStatus(function (response) {
-			socket.emit('facebook-login-info', response);
-		});
-	});
-
-	socket.on('nodeblog-auth-response', function (data) {
-		console.log(data);
-	});
 });

@@ -11,16 +11,16 @@ function SocketConfig (server) {
 
 	io.sockets.on('connection', function (socket) {
 		socket.on('facebook-login-info', function (data) {
-			var message;
+			var response;
 			if (data.status != 'connected') {
-				message = 'bad';
+				response = false;
 			} else if (AUTHORS.indexOf(data.authResponse.userID) === -1){
-				message = 'bad';
+				response = true;
 			} else {
-				message = 'good';
+				response = true;
 			}
-			console.log(data);
-			socket.emit('nodeblog-auth-response', message);
+			console.log(response);
+			socket.emit('nodeblog-auth-response', response);
 		});
 	});
 };
