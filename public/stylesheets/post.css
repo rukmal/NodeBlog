@@ -3,52 +3,44 @@ div.jumbotron {
 }
 
 img#intropic {
-    height: 6em;
+	height: 6em;
 
 }
 
 .containabout {
-    width: 650px;
+	width: 650px;
 }
 
 #move {
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .buttonalign {
-    margin-top: 5em;
-    width: 100px;
+	margin-top: 5em;
+	width: 100px;
 }
 
 .fb-share-button {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
-/* iPhone fitment */
-
-@media screen and (max-device-width: 600px) {
-    img#intropic {
-    height: 3em;
-}
-}
+/* Mobile screen configurations */
 
 @media screen and (max-device-width: 600px) {
-    h2 {
-    font-size: 1em;
-}
-}
+	img#intropic {
+		height: 3em;
+	}
 
-@media screen and (max-device-width: 600px) {
-    .containabout {
-    width: 300px;
+	h2 {
+		font-size: 1em;
+	}
 
+	.containabout {
+		width: 300px;
+	}
 
-}
-}
-
-@media screen and (max-device-width: 600px) {
-    p.text {
-        font-size: 1em;
-}
+	p.text {
+		font-size: 1em;
+	}
 }
