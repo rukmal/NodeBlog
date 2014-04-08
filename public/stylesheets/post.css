@@ -16,14 +16,11 @@ img#intropic {
 	margin-right: auto;
 }
 
-.buttonalign {
-	margin-top: 5em;
-	width: 100px;
+div
+{
+word-break: break-word;
 }
 
-.fb-share-button {
-	margin-bottom: 5px;
-}
 
 /* Mobile screen configurations */
 
@@ -37,10 +34,15 @@ img#intropic {
 	}
 
 	.containabout {
-		width: 300px;
+		width: 100%;
 	}
 
 	p.text {
 		font-size: 1em;
+	}
+
+	h1 {
+		font-size: 1.5em;
+		
 	}
 }

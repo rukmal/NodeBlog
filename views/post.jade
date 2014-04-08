@@ -11,10 +11,12 @@ block content
 		.container
 			!= content
 			br
-		.text-center
-			.socialbuttons
 		.jumbotron.text-center.containabout#move
 			img.img-circle#intropic(src='../#{imageLocation}')
 			h2 About the author:
 			p.text= description
+			br
+			.socialbuttons#move
+			br
+			br
 			.fb-comments(data-numposts="5" data-colorscheme="dark")
