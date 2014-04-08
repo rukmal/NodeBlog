@@ -91,6 +91,7 @@ exports.show_post = function (req, res) {
             console.log(err);
         }
         res.render('post', {
+        	title: post[0].title,
             post: post[0],
             content: marked(post[0].content),
             description: description,
