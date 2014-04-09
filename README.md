@@ -16,4 +16,4 @@ After following the instructions on screen to create a new app, find your applic
 ##Contact
 If you have any questions/suggestions, contact me at http://rukmal.me.
 ##Note
-This project is currently in development, and is NOT ready for use.
+This project is currently in development, and is NOT ready for use!
