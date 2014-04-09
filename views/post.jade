@@ -4,7 +4,7 @@ block content
 	link(rel='stylesheet' href='./../stylesheets/post.css')
 	script(src='./../javascripts/post.js')
 	script(src='./../javascripts/share.min.js')
-	#fb-root
+	script(src='./../socket.io/socket.io.js')
 	.jumbotron.text-center#title(style='background: url("#{post.photo}");background-size: 100% auto;background-attachment: fixed;background-color: rgb(237, 237, 237);color: #ffffff;box-shadow: 1px 10px 10px black;height: 22em;padding-top: 6.5em; background-repeat: no-repeat;')
 		h1= post.title
 	.jumbotron
@@ -19,4 +19,12 @@ block content
 			.socialbuttons#move
 			br
 			br
-			.fb-comments(data-numposts="5" data-colorscheme="dark")
+	#disqus_thread
+	script(type='text/javascript').
+		var disqus_shortname = 'rukmal-blog'; // required: replace example with your forum shortname
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		});
