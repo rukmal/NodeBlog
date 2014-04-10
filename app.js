@@ -10,6 +10,7 @@ var routes = require('./routes/main');
 var http = require('http');
 var path = require('path');
 var mongoose = require('mongoose');
+// var fs = require('fs');
 var postSchema = require('./models/post');
 
 var dbURL = 'mongodb://rukmal:test@ds029328.mongolab.com:29328/nodeblogdemo'; // <-- Change this to
@@ -59,4 +60,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-var io = require('./private/js/socketconfig.js')(server);
+// var file = __dirname + 'userdata.json';
+// fs.readFile()
+
+// var io = require('./private/js/socketconfig.js')(server);

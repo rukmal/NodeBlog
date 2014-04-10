@@ -10,12 +10,18 @@
 var Post = require('./../models/post');
 // Requiring Github-flavored markdown (to parse posts)
 var marked = require('marked');
-
+// var fs = require('fs');
+// var author = JSON.parse(require('userdata.json'));
+// fs.readFile('userdata.json', function (err, data) {
+// 	if (err) console.log(err);
+// 	JSON.parse(data);
+// });
+// console.log(this.author);
 var firstName = 'John'; // <-- Change all of these
 var lastName = 'Appleseed';
 var fullName = firstName + ' ' + lastName;
 var pageTitle = firstName + '\'s Blog : ';
-var description = 'This is a test description. My name isn\'t really John Appleseed. It\'s Rukmal Weerawarana, and if you want to get in touch with me, please do not hesitate to contact me at http://rukmal.me or rukmal.weerawarana@gmail.com.'
+var description = 'This is a test description. My name isn\'t really John Appleseed. It\'s Rukmal Weerawarana, and if you want to get in touch with me, please do not hesitate to contact me at http://rukmal.me or rukmal.weerawarana@gmail.com.';
 var imageLocation = 'images/user_picture.jpg';
 var personalSite = 'http://cnn.com/'; // <-- If none, set this to '#'
 
