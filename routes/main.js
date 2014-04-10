@@ -30,7 +30,7 @@ exports.all_posts = function (req, res) {
 		}
 		res.render('all_posts', {
 			personalSite: author.website,
-			fullName: author.fullname,
+			fullName: author.firstname + ' ' + author.lastname,
 			title: author.pagetitle + 'All posts',
 			posts: posts
 		});
