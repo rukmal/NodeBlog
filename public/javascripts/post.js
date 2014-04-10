@@ -6,7 +6,14 @@ $(document).ready(function() {
 		},
 		networks: {
 			facebook: {
-				app_id: '236305906562640'
+				enabled: true,
+				load_sdk: false
+			},
+			twitter: {
+				enabled: true
+			},
+			google_plus: {
+				enabled: true
 			}
 		}
 	});

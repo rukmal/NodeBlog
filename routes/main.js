@@ -90,7 +90,8 @@ exports.show_post = function (req, res) {
             post: post[0],
             content: marked(post[0].content),
             description: author.description,
-            imageLocation: author.userpicture
+            imageLocation: author.userpicture,
+            twitterID: author.twitter
         })
     });
 };
