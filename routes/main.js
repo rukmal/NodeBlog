@@ -6,29 +6,18 @@
 
 'use strict'
 
-// Requiring mongoose models
 var Post = require('./../models/post');
-// Requiring Github-flavored markdown (to parse posts)
 var marked = require('marked');
-// var fs = require('fs');
-// var author = JSON.parse(require('userdata.json'));
-// fs.readFile('userdata.json', function (err, data) {
-// 	if (err) console.log(err);
-// 	JSON.parse(data);
-// });
-// console.log(this.author);
-var firstName = 'John'; // <-- Change all of these
-var lastName = 'Appleseed';
-var fullName = firstName + ' ' + lastName;
-var pageTitle = firstName + '\'s Blog : ';
-var description = 'This is a test description. My name isn\'t really John Appleseed. It\'s Rukmal Weerawarana, and if you want to get in touch with me, please do not hesitate to contact me at http://rukmal.me or rukmal.weerawarana@gmail.com.';
-var imageLocation = 'images/user_picture.jpg';
-var personalSite = 'http://cnn.com/'; // <-- If none, set this to '#'
+var fs = require('fs');
+
+// Location of author data
+var authorJSON = './userdata.json';
+var author = JSON.parse(fs.readFileSync(authorJSON));
 
 exports.index = function (req, res) {
 	res.render('index',{
-		title: pageTitle + 'Home',
-		name: firstName
+		title: author.pagetitle + 'Home',
+		name: author.firstname
 	});
 };
 
@@ -40,9 +29,9 @@ exports.all_posts = function (req, res) {
 			console.log(err);
 		}
 		res.render('all_posts', {
-			personalSite: personalSite,
-			fullName: fullName,
-			title: pageTitle + 'All posts',
+			personalSite: author.website,
+			fullName: author.fullname,
+			title: author.pagetitle + 'All posts',
 			posts: posts
 		});
 	});
@@ -50,25 +39,25 @@ exports.all_posts = function (req, res) {
 
 exports.new_post = function (req, res) {
 	res.render('new_post_pages/new_post', {
-		title: pageTitle + 'Add new post'
+		title: author.pagetitle + 'Add new post'
 	});
 };
 
 exports.edit_post = function (req, res) {
 	res.render('edit_post', {
-		title: pageTitle + 'Edit post',
+		title: author.pagetitle + 'Edit post',
 	})
 }
 
 exports.new_post_error = function (req, res) {
 	res.render('new_post_pages/new_post_error', {
-		title: pageTitle + 'Post error'
+		title: author.pagetitle + 'Post error'
 	});
 };
 
 exports.new_post_success = function (req, res) {
 	res.render('new_post_pages/new_post_success', {
-		title: pageTitle + 'Post successful!'
+		title: author.pagetitle + 'Post successful!'
 	});
 };
 
@@ -100,8 +89,8 @@ exports.show_post = function (req, res) {
         	title: post[0].title,
             post: post[0],
             content: marked(post[0].content),
-            description: description,
-            imageLocation: imageLocation
+            description: author.description,
+            imageLocation: author.userpicture
         })
     });
 };

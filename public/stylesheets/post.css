@@ -3,7 +3,7 @@ div.jumbotron {
 }
 
 img#intropic {
-	height: 6em;
+	height: 10em;
 
 }
 
@@ -16,9 +16,8 @@ img#intropic {
 	margin-right: auto;
 }
 
-div
-{
-word-break: break-word;
+div {
+	word-break: break-word;
 }
 
 

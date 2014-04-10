@@ -1,8 +1,10 @@
 {
 	"firstname": "John",
 	"lastname": "Appleseed",
-	"pagetitle": "John's Blog",
+	"fullname": "John Appleseed",
+	"pagetitle": "John's Blog : ",
 	"description": "This is a test description. My name isn't really John Appleseed. It's Rukmal Weerawarana, and if you want to get in touch with me, please do not hesitate to contact me at http://rukmal.me or rukmal.weerawarana@gmail.com.",
 	"userpicture": "images/user_picture.jpg",
-	"website": "#"
+	"website": "#",
+	"mongodbURL": "mongodb://rukmal:test@ds029328.mongolab.com:29328/nodeblogdemo"
 }
