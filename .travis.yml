@@ -1,9 +1,11 @@
 language: node_js
+
+# test on two node.js versions: 0.6 and 0.8
 node_js:
-  - "0.10"
-before_install:
-  - "curl -L http://git.io/3l-rRA | /bin/sh"
-services:
-  - mongodb
-env: 
-  - LAIKA_OPTIONS="-t 5000"
+  - 0.6
+  - 0.8
+
+# configure notifications (email, IRC, campfire etc)
+# please update this section to your needs!
+notifications:
+  irc: "irc.freenode.org#travis"
