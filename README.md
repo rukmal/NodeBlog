@@ -1,4 +1,5 @@
 # NodeBlog - A blogging platform built on Node.js
+[![Build Status](https://travis-ci.org/rukmal/NodeBlog.svg?branch=master)](https://travis-ci.org/rukmal/NodeBlog)
 ![Alt text](./bin/NodeBlog_logo.png)
 ##Description
 NodeBlog is a full stack blogging platform, including a utility to write and publish posts in Markdown, as well as Facebook-authenticated comments. This utility was developed and written entirely in JavaScript, HTML and CSS using Node.js, ExpressJS, MongoDB and the Facebook SDK.
