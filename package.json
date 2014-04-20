@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test":"sh test"
   },
   "dependencies": {
     "express": "3.4.8",
@@ -12,6 +13,7 @@
     "forever": "*",
     "markdown": "*",
     "marked": "*",
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "mocha": "*"
   }
 }

@@ -1,0 +1,9 @@
+#/bin/bash
+
+test() {
+	node app.js
+}
+
+test & sleep 3
+killall node
+exit 0
