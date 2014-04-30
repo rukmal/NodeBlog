@@ -15,16 +15,33 @@ var authorJSON = './userdata.json';
 var author = JSON.parse(fs.readFileSync(authorJSON));
 
 exports.index = function (req, res) {
-	res.render('index',{
-		title: author.pagetitle + 'Home',
-		name: author.firstname
+	var myCursor = Post.find();
+	myCursor.sort({ 'date': -1 });
+	myCursor.find(function (err, posts) {
+		var displayedPosts = [];
+		for (var i = 0; i < 5; i++) {
+			try {
+				displayedPosts.push({
+					title: posts[i].title,
+					slug: posts[i].slug
+				});
+			} catch (err) {
+				break;
+			}
+		}
+		console.log(displayedPosts);
+		res.render('index',{
+			title: author.pagetitle + 'Home',
+			name: author.firstname,
+			posts: displayedPosts
+		});
 	});
 };
 
 exports.all_posts = function (req, res) {
 	var myCursor = Post.find();
 	myCursor.sort({ 'date': -1 });
-	myCursor.find(function(err, posts) {
+	myCursor.find(function (err, posts) {
 		if (err) {
 			console.log(err);
 		}
@@ -67,7 +84,7 @@ exports.new_post_add = function (req, res) {
 		content: req.body.post_content,
 		description: req.body.post_description,
 		photo: req.body.post_photo,
-		slug: req.body.post_slug
+		slug: 'post/' + req.body.post_slug
 	});
 
 	post.save(function(err) {

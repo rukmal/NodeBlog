@@ -11,7 +11,7 @@ block content
             - each post in posts
                 div#border
                     p#date= post.date.getDate() + ' ' + months[post.date.getMonth()] + ' ' + post.date.getFullYear()
-                    a.link(href='/post/#{post.slug}'): h2.postlink=post.title
+                    a.link(href='/#{post.slug}'): h2.postlink=post.title
                     p= post.description
                     br
     div.navbar-fixed-bottom.footer
