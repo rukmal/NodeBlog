@@ -62,25 +62,21 @@ exports.new_post_success = function (req, res) {
 };
 
 exports.new_post_add = function (req, res) {
-	if (req.body.oauthtoken === oauthtoken) {
-		var post = new Post({
-			title: req.body.post_title,
-			content: req.body.post_content,
-			description: req.body.post_description,
-			photo: req.body.post_photo,
-			slug: req.body.post_slug
-		});
+	var post = new Post({
+		title: req.body.post_title,
+		content: req.body.post_content,
+		description: req.body.post_description,
+		photo: req.body.post_photo,
+		slug: req.body.post_slug
+	});
 
-		post.save(function(err) {
-			if (err) {
-				res.redirect('/new_post_error');
-			} else {
-				res.redirect('/new_post_success');
-			}
-		});
-	} else {
-		res.redirect('/new_post_error');
-	}
+	post.save(function(err) {
+		if (err) {
+			res.redirect('/new_post_error');
+		} else {
+			res.redirect('/new_post_success');
+		}
+	});
 };
 
 
